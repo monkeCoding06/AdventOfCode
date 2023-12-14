@@ -27,33 +27,15 @@ public class Day1Part2 {
         while (matcher.find()) {
             String name = matcher.group();
             switch (name) {
-                case "one":
-                    data = data.replaceFirst(regexToReplace, "1");
-                    return data;
-                case "two":
-                    data = data.replaceFirst(regexToReplace, "2");
-                    return data;
-                case "three":
-                    data = data.replaceFirst(regexToReplace, "3");
-                    return data;
-                case "four":
-                    data = data.replaceFirst(regexToReplace, "4");
-                    return data;
-                case "five":
-                    data = data.replaceFirst(regexToReplace, "5");
-                    return data;
-                case "six":
-                    data = data.replaceFirst(regexToReplace, "6");
-                    return data;
-                case "seven":
-                    data = data.replaceFirst(regexToReplace, "7");
-                    return data;
-                case "eight":
-                    data = data.replaceFirst(regexToReplace, "8");
-                    return data;
-                case "nine":
-                    data = data.replaceFirst(regexToReplace, "9");
-                    return data;
+                case "one": data = data.replaceFirst(regexToReplace, "1");return data;
+                case "two": data = data.replaceFirst(regexToReplace, "2");return data;
+                case "three": data = data.replaceFirst(regexToReplace, "3");return data;
+                case "four": data = data.replaceFirst(regexToReplace, "4");return data;
+                case "five": data = data.replaceFirst(regexToReplace, "5");return data;
+                case "six": data = data.replaceFirst(regexToReplace, "6");return data;
+                case "seven": data = data.replaceFirst(regexToReplace, "7");return data;
+                case "eight": data = data.replaceFirst(regexToReplace, "8");return data;
+                case "nine": data = data.replaceFirst(regexToReplace, "9");return data;
             }
         }
         return data;
