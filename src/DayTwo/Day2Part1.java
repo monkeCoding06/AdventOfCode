@@ -19,13 +19,14 @@ public class Day2Part1 {
     protected int getValidGameId(String data) {
         if (checkIfGameWasPossible(data)) {
             Matcher matcher = gameId.matcher(data);
+            //noinspection ResultOfMethodCallIgnored
             matcher.find();
             return Integer.parseInt(matcher.group(1));
         }
         return 0;
     }
 
-    protected void run() throws FileNotFoundException {
+    protected int getResult() throws FileNotFoundException {
         int sum = 0;
         File inputDay2 = new File("src\\DayTwo\\advent2.txt");
         Scanner scannerInput = new Scanner(inputDay2);
@@ -34,6 +35,11 @@ public class Day2Part1 {
             int number = getValidGameId(data);
             sum += number;
         }
+        return sum;
+    }
+
+    protected void run() throws FileNotFoundException {
+        int sum = getResult();
         System.out.println("day two solution: " + sum);
     }
 }

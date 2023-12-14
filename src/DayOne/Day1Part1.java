@@ -5,19 +5,6 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Day1Part1 {
-    public void run() throws FileNotFoundException {
-        int sum = 0;
-        File inputDay1 = new File("src\\DayOne\\advent1.txt");
-        Scanner scannerInput = new Scanner(inputDay1);
-        while (scannerInput.hasNextLine()) {
-            String data = scannerInput.nextLine();
-            data = data.replaceAll("\\D", "");
-            int number = extractNumber(data);
-            sum += number;
-        }
-        System.out.println("day one solution: " + sum);
-    }
-
     @SuppressWarnings("DuplicatedCode")
     private int extractNumber(String data) {
         String firstNumber = String.valueOf(data.charAt(0));
@@ -27,5 +14,23 @@ public class Day1Part1 {
         }
         String fullNumber = firstNumber + secondNumber;
         return Integer.parseInt(fullNumber);
+    }
+
+    protected int getResult() throws FileNotFoundException {
+        int sum = 0;
+        File inputDay1 = new File("src\\DayOne\\advent1.txt");
+        Scanner scannerInput = new Scanner(inputDay1);
+        while (scannerInput.hasNextLine()) {
+            String data = scannerInput.nextLine();
+            data = data.replaceAll("\\D", "");
+            int number = extractNumber(data);
+            sum += number;
+        }
+        return sum;
+    }
+
+    public void run() throws FileNotFoundException {
+        int sum = getResult();
+        System.out.println("day one solution: " + sum);
     }
 }
