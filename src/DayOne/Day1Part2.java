@@ -13,7 +13,7 @@ public class Day1Part2 {
     @SuppressWarnings("DuplicatedCode")
     public void run() throws FileNotFoundException {
         int sum = 0;
-        File inputDay1 = new File("C:\\Users\\lkohlfuerst\\IntelliJProjects\\advent1\\src\\DayOne\\advent1.txt");
+        File inputDay1 = new File("src\\DayOne\\advent1.txt");
         Scanner scannerInput = new Scanner(inputDay1);
         while (scannerInput.hasNextLine()) {
             String data = scannerInput.nextLine();

@@ -27,7 +27,7 @@ public class Day2Part1 {
 
     protected void run() throws FileNotFoundException {
         int sum = 0;
-        File inputDay2 = new File("C:\\Users\\lkohlfuerst\\IntelliJProjects\\advent1\\src\\DayTwo\\advent2.txt");
+        File inputDay2 = new File("src\\DayTwo\\advent2.txt");
         Scanner scannerInput = new Scanner(inputDay2);
         while (scannerInput.hasNextLine()) {
             String data = scannerInput.nextLine();
