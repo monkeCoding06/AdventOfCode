@@ -1,5 +1,6 @@
 import DayOne.*;
 import DayTwo.*;
+import DayThree.*;
 
 import java.io.FileNotFoundException;
 public class Main {
@@ -9,5 +10,9 @@ public class Main {
 
         DayTwoMain dayTwo = new DayTwoMain();
         dayTwo.run();
+
+        DayThreeMain dayThree = new DayThreeMain();
+        dayThree.run();
+
     }
 }

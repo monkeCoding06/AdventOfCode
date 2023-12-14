@@ -1,4 +1,4 @@
-package DayTwo;
+package DayThree;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -6,7 +6,7 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Day2Part2 {
+public class Day3Part2 {
     protected int extractEachBiggestNumberPerColor(String data, String color) {
         int biggestNumber = 0;
         Pattern colorExtractNumberPattern = Pattern.compile("(\\d+) " + color);
