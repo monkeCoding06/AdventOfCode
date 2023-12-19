@@ -1,18 +1,22 @@
+import DayFour.*;
 import DayOne.*;
 import DayTwo.*;
 import DayThree.*;
 
-import java.io.FileNotFoundException;
+import java.io.IOException;
+
 public class Main {
-    public static void main(String[] args) throws FileNotFoundException {
-        DayOneMain dayOne = new DayOneMain();
+    public static void main(String[] args) throws IOException {
+        Day1Main dayOne = new Day1Main();
         dayOne.run();
 
-        DayTwoMain dayTwo = new DayTwoMain();
+        Day2Main dayTwo = new Day2Main();
         dayTwo.run();
 
-        DayThreeMain dayThree = new DayThreeMain();
+        Day3Main dayThree = new Day3Main();
         dayThree.run();
 
+        Day4Main dayFour = new Day4Main();
+        dayFour.run();
     }
 }
