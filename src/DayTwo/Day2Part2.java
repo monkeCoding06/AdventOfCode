@@ -6,6 +6,7 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+@SuppressWarnings("DuplicatedCode")
 public class Day2Part2 {
     protected int extractEachBiggestNumberPerColor(String data, String color) {
         int biggestNumber = 0;
@@ -22,8 +23,8 @@ public class Day2Part2 {
 
     public int getResult() throws FileNotFoundException {
         int sum = 0;
-        File inputDay2 = new File("src\\DayTwo\\advent3.txt");
-        Scanner scannerInput = new Scanner(inputDay2);
+        File input = new File("src\\DayTwo\\advent2.txt");
+        Scanner scannerInput = new Scanner(input);
         while (scannerInput.hasNextLine()) {
             String data = scannerInput.nextLine();
             int biggestNumberRed = extractEachBiggestNumberPerColor(data, "red");
