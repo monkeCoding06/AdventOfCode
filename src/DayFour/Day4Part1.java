@@ -7,6 +7,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Day4Part1 {
+    Pattern numberPattern = Pattern.compile("\\d+");
+
     protected int getResult() throws FileNotFoundException {
         int sum = 0;
         File input = new File("src\\DayFour\\advent4.txt");
@@ -19,29 +21,23 @@ public class Day4Part1 {
         return sum;
     }
 
-    public void run() throws FileNotFoundException {
-        int sum = getResult();
-        System.out.println("day four solution: " + sum);
-    }
-
     protected int getCardValue(String data) {
         int value = 0;
-        Pattern pattern = Pattern.compile("\\d+");
         String winningNumbersString = data.substring(data.indexOf(':') + 1, data.indexOf('|'));
         String numbersPresentString = data.substring(data.indexOf('|') + 1) + " ";
-        Matcher matcher = pattern.matcher(winningNumbersString);
-        while (matcher.find()) {
-            String winningNumber = matcher.group();
-            Pattern winNumberPattern = Pattern.compile("\\D" + winningNumber + "\\D");
+        Matcher winningNumberMatcher = numberPattern.matcher(winningNumbersString);
+        while (winningNumberMatcher.find()) {
+            Pattern winNumberPattern = Pattern.compile("\\D" + winningNumberMatcher.group() + "\\D");
             Matcher winNumberMatcher = winNumberPattern.matcher(numbersPresentString);
             if (winNumberMatcher.find()) {
-                if (value < 1) {
-                    value++;
-                } else {
-                    value = value * 2;
-                }
+                value = (value < 1) ? 1 : value * 2;
             }
         }
         return value;
+    }
+
+    public void run() throws FileNotFoundException {
+        int sum = getResult();
+        System.out.println("day four solution: " + sum);
     }
 }
