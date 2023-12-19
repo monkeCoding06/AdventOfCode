@@ -44,8 +44,8 @@ public class Day1Part2 {
     @SuppressWarnings("DuplicatedCode")
     protected int getResult() throws FileNotFoundException {
         int sum = 0;
-        File inputDay1 = new File("src\\DayOne\\advent1.txt");
-        Scanner scannerInput = new Scanner(inputDay1);
+        File input = new File("src\\DayOne\\advent1.txt");
+        Scanner scannerInput = new Scanner(input);
         while (scannerInput.hasNextLine()) {
             String data = scannerInput.nextLine();
             for (int i = 0; i < data.length() - 1; i++) {
